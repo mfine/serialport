@@ -6,7 +6,8 @@ import Data.Word
 
 -- | Supported baudrates
 data CommSpeed
-  = CS110
+  = CommSpeed Word64
+  | CS110
   | CS300
   | CS600
   | CS1200
@@ -17,7 +18,7 @@ data CommSpeed
   | CS38400
   | CS57600
   | CS115200
-  deriving (Show, Eq, Bounded)
+  deriving (Show, Eq)
 
 
 data StopBits = One | Two deriving (Show, Eq, Bounded)

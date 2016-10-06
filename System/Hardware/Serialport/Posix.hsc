@@ -232,6 +232,7 @@ configureSettings termOpts settings =
 commSpeedToBaudRate :: CommSpeed -> BaudRate
 commSpeedToBaudRate speed =
     case speed of
+      (CommSpeed x) -> (BaudRate x)
       CS110 -> B110
       CS300 -> B300
       CS600 -> B600
